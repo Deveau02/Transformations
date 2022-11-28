@@ -1,0 +1,65 @@
+/* TRANSFORMATIONS */
+
+
+
+
+/* BASE STYLES
+------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #080923;
+    color: #1d1d1d;
+    font-family: sans-serif;
+    perspective: 10vw;
+    perspective-origin: left;
+    animation-name: bg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* WEIRD STUFF
+------------------------------------- */
+img { transform: translate(900px, 500px);
+    transform-origin: center left;
+    padding: 0.25em;
+    animation-name: optimistic;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;}
+
+
+    @keyframes optimistic  {
+    
+        0% {
+            transform: translate(0px, 0px);
+        }
+    
+        80% {
+            transform: translate(450px, 250px);
+        }
+    
+        95% {
+            transform: translate(900px, 500px);
+        }
+    
+        100% {
+            transform: translate(0px, 0px);
+        }
+    
+    }
